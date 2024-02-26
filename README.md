@@ -1,7 +1,10 @@
 
-# Prerequsities
+## Prerequsities
 - Node 
 
-# How to start
-- yarn (installation of dependencies)
-- yarn dev (start app)
+## Quick start
+
+- `yarn` install dependencies
+- `yarn dev` run application for development
+- `yarn start` run builded application
+- `yarn build` build application
