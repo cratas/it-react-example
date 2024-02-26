@@ -1,7 +1,7 @@
-import { List, ListItem, ListItemText, IconButton } from "@mui/material";
-import DeleteIcon from "@mui/icons-material/Delete";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { Todo } from "../types";
+import { List, ListItem, ListItemText, IconButton } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { Todo } from '../types';
 
 interface Props {
   todos: Todo[];
@@ -21,26 +21,26 @@ const TodoList = ({ todos, toggleComplete, deleteTask }: Props) => {
           key={id}
           dense
           sx={{
-            border: isCompleted ? "1px solid gray" : "1px solid white",
-            borderRadius: "5px",
+            border: isCompleted ? '1px solid gray' : '1px solid white',
+            borderRadius: '5px',
             mb: 1,
           }}
         >
           <ListItemText
             primary={task}
             style={{
-              color: isCompleted ? "gray" : "white",
-              textDecoration: isCompleted ? "line-through" : "none",
+              color: isCompleted ? 'gray' : 'white',
+              textDecoration: isCompleted ? 'line-through' : 'none',
             }}
           />
 
-          <IconButton onClick={() => deleteTask(id)} sx={{ color: "gray" }}>
+          <IconButton onClick={() => deleteTask(id)} sx={{ color: 'gray' }}>
             <DeleteIcon />
           </IconButton>
 
           <IconButton
             onClick={() => toggleComplete(id)}
-            sx={{ color: isCompleted ? "white" : "gray" }}
+            sx={{ color: isCompleted ? 'white' : 'gray' }}
           >
             <CheckCircleIcon />
           </IconButton>
