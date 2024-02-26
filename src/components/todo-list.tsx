@@ -15,7 +15,7 @@ const TodoList = ({ todos, toggleComplete, deleteTask }: Props) => {
   );
 
   return (
-    <List>
+    <List sx={{ mt: 2 }}>
       {sortedTodos.map(({ id, isCompleted, task }) => (
         <ListItem
           key={id}

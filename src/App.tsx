@@ -8,18 +8,18 @@ import { Box, Typography } from '@mui/material';
 const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
 
-  const addTask = (task: string) => {
+  const handleAddTask = (task: string) => {
     const newTodo: Todo = { id: Date.now(), task, isCompleted: false };
 
     setTodos([...todos, newTodo]);
   };
 
-  const toggleComplete = (id: number) =>
+  const handleToggleComplete = (id: number) =>
     setTodos(
       todos.map((todo) => (todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo))
     );
 
-  const deleteTask = (id: number) => {
+  const handleDeleteTask = (id: number) => {
     const filteredTodos = todos.filter((todo) => todo.id !== id);
 
     setTodos(filteredTodos);
@@ -31,9 +31,11 @@ const App: React.FC = () => {
         To-Do List
       </Typography>
 
-      <TodoInput addTask={addTask} />
+      <TodoInput addTask={handleAddTask} />
 
-      <TodoList todos={todos} toggleComplete={toggleComplete} deleteTask={deleteTask} />
+      <TodoList todos={todos} toggleComplete={handleToggleComplete} deleteTask={handleDeleteTask} />
+
+      {/* TODO: Create Delete all button (conditonally rendered) */}
     </Box>
   );
 };

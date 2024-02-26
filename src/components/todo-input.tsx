@@ -22,7 +22,6 @@ const TodoInput = ({ addTask }: Props) => {
       <TextField
         inputProps={{ style: { color: 'white' } }}
         variant="outlined"
-        label="Add a new task"
         value={input}
         onChange={(e) => setInput(e.target.value)}
         sx={{ color: 'white', border: '1px solid gray', borderRadius: '5px' }}
