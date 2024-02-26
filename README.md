@@ -1,2 +1,7 @@
-# it-react-example
-Example of simple React application with simple configuration.
+
+# Prerequsities
+- Node 
+
+# How to start
+- yarn (installation of dependencies)
+- yarn dev (start app)
